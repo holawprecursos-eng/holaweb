@@ -62,6 +62,33 @@
             border: 1px solid rgba(255, 255, 255, 0.1) !important;
             color: white !important;
         }
+
+        /* Estilos para la sección de proceso disruptiva */
+        .process-line {
+            position: absolute;
+            left: 20px;
+            top: 0;
+            bottom: 0;
+            width: 1px;
+            background: linear-gradient(to bottom, transparent, #3b82f6, transparent);
+        }
+
+        .process-step {
+            position: relative;
+            padding-left: 50px;
+            margin-bottom: 60px;
+        }
+
+        .process-dot {
+            position: absolute;
+            left: 12px;
+            top: 5px;
+            width: 16px;
+            height: 16px;
+            background: #3b82f6;
+            border-radius: 50%;
+            box-shadow: 0 0 15px #3b82f6;
+        }
     </style>
 </head>
 <body>
@@ -83,7 +110,7 @@
                 No es solo una web. Es el respaldo profesional que tu negocio necesita para que los clientes elijan comprarte a vos y no a la competencia.
             </p>
             <div class="flex flex-col gap-4 px-6">
-                <a href="#contacto" class="btn-primary py-5 rounded-2xl text-lg accent-glow">IMPULSAR MI NEGOCIO</a>
+                <a href="#contacto" class="btn-primary py-5 rounded-2xl text-lg accent-glow text-center">IMPULSAR MI NEGOCIO</a>
             </div>
         </div>
     </section>
@@ -97,7 +124,6 @@
             <h2 class="text-3xl font-bold mb-8 tracking-tighter">¿Por qué una web profesional te ayuda a vender más?</h2>
             
             <div class="grid gap-6">
-                <!-- Beneficio 1 -->
                 <div class="glass-card p-8">
                     <div class="flex items-start gap-4">
                         <div class="text-blue-500 text-2xl mt-1"><i class="fas fa-shield-check"></i></div>
@@ -108,7 +134,6 @@
                     </div>
                 </div>
 
-                <!-- Beneficio 2 -->
                 <div class="glass-card p-8 border-blue-500/30">
                     <div class="flex items-start gap-4">
                         <div class="text-blue-500 text-2xl mt-1"><i class="fas fa-map-marker-alt"></i></div>
@@ -119,7 +144,6 @@
                     </div>
                 </div>
 
-                <!-- Beneficio 3 -->
                 <div class="glass-card p-8">
                     <div class="flex items-start gap-4">
                         <div class="text-blue-500 text-2xl mt-1"><i class="fas fa-user-check"></i></div>
@@ -128,6 +152,35 @@
                             <p class="text-gray-400 text-sm leading-relaxed">Tu web trabaja mientras dormís. Cuando un cliente te busca a deshoras, tu sitio le confirma que sos la opción correcta para su problema.</p>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN DE PROCESO DISRUPTIVA -->
+    <section class="py-20">
+        <div class="max-w-xl mx-auto relative">
+            <h2 class="text-xs font-bold tracking-[0.4em] text-blue-500 uppercase mb-12 italic">// EL CAMINO AL ÉXITO</h2>
+            
+            <div class="relative">
+                <div class="process-line"></div>
+                
+                <div class="process-step">
+                    <div class="process-dot"></div>
+                    <h3 class="text-2xl font-bold mb-2 tracking-tighter uppercase">01. Conexión</h3>
+                    <p class="text-gray-500 text-sm leading-snug">Hablamos sobre tus objetivos. Entendemos qué vendés y quién es tu cliente ideal en Córdoba o el mundo.</p>
+                </div>
+
+                <div class="process-step">
+                    <div class="process-dot"></div>
+                    <h3 class="text-2xl font-bold mb-2 tracking-tighter uppercase text-blue-500">02. Construcción</h3>
+                    <p class="text-gray-500 text-sm leading-snug">Diseñamos tu identidad digital con foco en la conversión. Creamos tu respaldo de autoridad.</p>
+                </div>
+
+                <div class="process-step">
+                    <div class="process-dot"></div>
+                    <h3 class="text-2xl font-bold mb-2 tracking-tighter uppercase">03. Despegue</h3>
+                    <p class="text-gray-500 text-sm leading-snug">Vinculamos todo a Google Business. Tu negocio empieza a proyectar la confianza que cierra ventas.</p>
                 </div>
             </div>
         </div>
