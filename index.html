@@ -6,219 +6,212 @@
     
     <!-- 1. OPTIMIZACIÓN DE METADATOS (SEO) -->
     <title>Diseño Web Profesional y Autoridad Digital en Argentina | HOLAWEB</title>
-    <meta name="description" content="Creamos tu sitio web profesional en tiempo récord con enfoque en ventas. Impulsamos tu perfil de Google Business para ganar autoridad en Argentina. ¡Pedí tu presupuesto!">
+    <meta name="description" content="Creamos tu sitio web profesional con enfoque en ventas. Potenciamos tu perfil de Google Business para ganar autoridad en Argentina. ¡Pedí tu presupuesto hoy!">
     <meta name="keywords" content="diseño web argentina, google maps negocios, autoridad digital, paginas web cordoba, hosting rapido">
     
-    <!-- Open Graph para redes sociales -->
+    <!-- Open Graph -->
     <meta property="og:title" content="HOLAWEB | Diseño Web que Vende">
     <meta property="og:description" content="Tu marca merece ser recordada. Convertí la confianza en ventas con una web de alta velocidad.">
     <meta property="og:type" content="website">
 
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <!-- Tailwind CSS v3 CDN -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            black: '#000000',
+                            white: '#FFFFFF',
+                            gray: '#111111',
+                            accent: '#3B82F6', 
+                        }
+                    },
+                    borderRadius: {
+                        'custom': '4px',
+                    }
+                }
+            }
+        }
+    </script>
+    
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
-        
         body {
-            background-color: #0a0a0a;
-            color: #ffffff;
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            overflow-x: hidden;
+            background-color: #000000;
+            color: #FFFFFF;
+            font-family: 'Inter', sans-serif;
         }
-
-        .glass-card {
-            background: rgba(255, 255, 255, 0.03);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 24px;
+        .text-balance {
+            text-wrap: balance;
         }
-
-        .text-gradient {
-            background: linear-gradient(135deg, #ffffff 0%, #a1a1a1 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+        .huge-title {
+            font-size: clamp(2.5rem, 8vw, 6rem);
+            line-height: 1.05;
+            letter-spacing: -0.04em;
         }
-
-        .accent-glow {
-            box-shadow: 0 0 40px rgba(59, 130, 246, 0.2);
-        }
-
-        section {
-            padding: 5rem 1.5rem;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-
-        .badge-google {
-            background: rgba(66, 133, 244, 0.1);
-            border: 1px solid rgba(66, 133, 244, 0.3);
-            color: #4285F4;
-        }
-
-        .btn-primary {
-            background: #ffffff;
-            color: #000000;
-            font-weight: 700;
+        .btn-glow {
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
             transition: all 0.3s ease;
         }
-
-        .btn-primary:active {
-            transform: scale(0.96);
+        .btn-glow:hover {
+            box-shadow: 0 0 30px rgba(255, 255, 255, 0.25);
+            transform: translateY(-2px);
         }
-
-        input, textarea {
-            background: rgba(255, 255, 255, 0.05) !important;
-            border: 1px solid rgba(255, 255, 255, 0.1) !important;
-            color: white !important;
-        }
-
-        .process-line {
-            position: absolute;
-            left: 20px;
-            top: 0;
-            bottom: 0;
-            width: 1px;
-            background: linear-gradient(to bottom, transparent, #3b82f6, transparent);
-        }
-
-        .process-step {
-            position: relative;
-            padding-left: 50px;
-            margin-bottom: 60px;
-        }
-
-        .process-dot {
-            position: absolute;
-            left: 12px;
-            top: 5px;
-            width: 16px;
-            height: 16px;
-            background: #3b82f6;
-            border-radius: 50%;
-            box-shadow: 0 0 15px #3b82f6;
+        .timeline-line {
+            width: 2px;
+            background: linear-gradient(to bottom, #3B82F6 0%, #111111 100%);
         }
     </style>
 </head>
-<body>
+<body class="bg-brand-black text-brand-white antialiased">
 
-    <!-- Header -->
-    <header class="fixed top-0 left-0 w-full z-50 p-6 flex justify-between items-center bg-black/50 backdrop-blur-md border-b border-white/5">
-        <div class="font-extrabold text-xl tracking-tighter">HOLAWEB</div>
-        <nav>
-            <a href="#contacto" class="text-[10px] font-bold bg-white/10 px-4 py-2 rounded-full uppercase tracking-widest">Contacto</a>
-        </nav>
-    </header>
-
-    <!-- 2. JERARQUÍA DE ENCABEZADOS (H1) -->
-    <section class="pt-32 pb-20">
-        <div class="max-w-xl mx-auto text-center animate__animated animate__fadeIn">
-            <span class="text-blue-500 font-bold tracking-widest text-[10px] uppercase mb-4 block italic">Expertos en Diseño Web Profesional</span>
-            <h1 class="text-5xl md:text-7xl font-extrabold tracking-tighter leading-[1.1] mb-6 text-gradient text-balance">
-                Diseño Web que convierte confianza en ventas.
-            </h1>
-            <p class="text-gray-400 text-lg leading-relaxed mb-10 px-4">
-                No es solo una web. Es el respaldo profesional que tu negocio necesita en Argentina para que los clientes elijan comprarte a vos.
-            </p>
-            <div class="flex flex-col gap-4 px-6">
-                <a href="#contacto" class="btn-primary py-5 rounded-2xl text-lg accent-glow text-center">IMPULSAR MI NEGOCIO</a>
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-brand-black/80 backdrop-blur-md border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="text-xl font-black tracking-tighter">HOLAWEB</div>
+            <div>
+                <a class="text-[10px] font-bold tracking-widest uppercase border border-white/20 px-6 py-2 rounded-custom hover:bg-white hover:text-black transition-colors" href="#contacto">
+                    CONTACTO
+                </a>
             </div>
         </div>
-    </section>
+    </nav>
 
-    <!-- 2. JERARQUÍA (H2) - Autoridad y Google -->
-    <section class="bg-white/5 rounded-[3rem] mx-2 py-20">
-        <div class="max-w-xl mx-auto">
-            <div class="badge-google inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-[10px] font-bold mb-6 uppercase tracking-widest">
-                <i class="fab fa-google text-sm"></i> Google Business Ready
+    <main>
+        <!-- Hero Section -->
+        <section class="relative min-h-screen flex flex-col items-center justify-center pt-20 px-6 text-center" id="hero">
+            <div class="max-w-5xl mx-auto">
+                <span class="text-[10px] font-bold tracking-[0.3em] uppercase text-brand-accent mb-8 block opacity-80 italic">
+                    // Expertos en Diseño Web Profesional
+                </span>
+                <h1 class="huge-title font-black mb-10 text-balance uppercase">
+                    Diseño Web que convierte confianza en ventas.
+                </h1>
+                <p class="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto mb-12 leading-relaxed text-balance">
+                    No es solo una web. Es el respaldo profesional que tu negocio necesita en Argentina para que los clientes elijan comprarte a vos y no a la competencia.
+                </p>
+                <a class="inline-block bg-white text-black font-extrabold text-xs tracking-widest uppercase px-12 py-5 rounded-custom btn-glow" href="#contacto">
+                    IMPULSAR MI NEGOCIO
+                </a>
             </div>
-            <h2 class="text-3xl font-bold mb-8 tracking-tighter">Beneficios de una Web con Autoridad Digital</h2>
-            
-            <div class="grid gap-6">
-                <div class="glass-card p-8">
-                    <div class="flex items-start gap-4">
-                        <div class="text-blue-500 text-2xl mt-1"><i class="fas fa-shield-check"></i></div>
-                        <div>
-                            <h3 class="text-lg font-bold mb-2">Seguridad para el Cliente</h3>
-                            <p class="text-gray-400 text-sm leading-relaxed">La confianza es el motor de la venta. Una web profesional confirma que tu empresa es real, seria y confiable.</p>
+        </section>
+
+        <!-- Benefits Section con Enfoque en Autoridad -->
+        <section class="py-24 px-6 bg-brand-gray/30" id="beneficios">
+            <div class="max-w-6xl mx-auto bg-brand-gray/50 border border-white/5 rounded-[32px] p-8 md:p-16">
+                <div class="mb-16">
+                    <span class="inline-block bg-brand-accent/10 text-brand-accent text-[10px] font-bold tracking-widest uppercase px-3 py-1 rounded-full mb-6">
+                        Google Business Ready
+                    </span>
+                    <h2 class="text-3xl md:text-5xl font-extrabold tracking-tight max-w-2xl uppercase">
+                        Autoridad Digital: Por qué una web te ayuda a vender más
+                    </h2>
+                </div>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <!-- Benefit 1 -->
+                    <div class="group p-8 border border-white/10 rounded-custom bg-black/40 hover:border-brand-accent/50 transition-colors">
+                        <div class="text-brand-accent mb-4 text-2xl">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                            </svg>
                         </div>
+                        <h3 class="text-xl font-bold mb-4 uppercase tracking-tighter">Seguridad para el Cliente</h3>
+                        <p class="text-gray-400 leading-relaxed text-sm">
+                            La confianza es el motor de la venta. Una web profesional confirma que tu empresa es real, seria y confiable ante ojos de nuevos clientes.
+                        </p>
+                    </div>
+                    <!-- Benefit 2 -->
+                    <div class="group p-8 border border-white/10 rounded-custom bg-black/40 hover:border-brand-accent/50 transition-colors">
+                        <div class="text-brand-accent mb-4 text-2xl">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4 uppercase tracking-tighter">SEO Local & Google Maps</h3>
+                        <p class="text-gray-400 leading-relaxed text-sm">
+                            Sumar tu web a <span class="text-white font-semibold">Google Business</span> le da la señal definitiva de autoridad a Google. Aparecé antes que nadie cuando te busquen.
+                        </p>
                     </div>
                 </div>
+            </div>
+        </section>
 
-                <div class="glass-card p-8 border-blue-500/30">
-                    <div class="flex items-start gap-4">
-                        <div class="text-blue-500 text-2xl mt-1"><i class="fas fa-map-marker-alt"></i></div>
-                        <div>
-                            <h3 class="text-lg font-bold mb-2">SEO Local en Google Maps</h3>
-                            <p class="text-gray-400 text-sm leading-relaxed text-balance">Sumar tu web a tu perfil de <b>Google Business</b> mejora tu posicionamiento local. Aparecé antes que nadie cuando te busquen en Argentina.</p>
-                        </div>
+        <!-- Process Section -->
+        <section class="py-32 px-6" id="proceso">
+            <div class="max-w-4xl mx-auto">
+                <div class="mb-20">
+                    <span class="text-xs font-bold tracking-[0.4em] uppercase text-brand-accent block mb-4 italic">
+                        // NUESTRO PROCESO DE TRABAJO
+                    </span>
+                </div>
+                <div class="relative pl-8 md:pl-12">
+                    <div class="absolute left-0 top-0 bottom-0 timeline-line opacity-20"></div>
+                    
+                    <div class="relative mb-20 group">
+                        <div class="absolute -left-[35px] md:-left-[51px] top-0 w-4 h-4 rounded-full bg-brand-accent shadow-[0_0_15px_#3B82F6]"></div>
+                        <h3 class="text-2xl md:text-3xl font-black mb-4 group-hover:text-brand-accent transition-colors uppercase tracking-tighter">01. Conexión Estratégica</h3>
+                        <p class="text-gray-400 max-w-xl leading-relaxed">Analizamos tu negocio para diseñar una solución que no solo sea estética, sino funcional y orientada a resultados.</p>
+                    </div>
+
+                    <div class="relative mb-20 group">
+                        <div class="absolute -left-[35px] md:-left-[51px] top-0 w-4 h-4 rounded-full bg-brand-accent shadow-[0_0_15px_#3B82F6]"></div>
+                        <h3 class="text-2xl md:text-3xl font-black mb-4 group-hover:text-brand-accent transition-colors uppercase tracking-tighter">02. Diseño de Autor</h3>
+                        <p class="text-gray-400 max-w-xl leading-relaxed">Creamos interfaces rápidas y seguras bajo el concepto Mobile-First, garantizando una experiencia perfecta en celulares.</p>
+                    </div>
+
+                    <div class="relative group">
+                        <div class="absolute -left-[35px] md:-left-[51px] top-0 w-4 h-4 rounded-full bg-brand-accent shadow-[0_0_15px_#3B82F6]"></div>
+                        <h3 class="text-2xl md:text-3xl font-black mb-4 group-hover:text-brand-accent transition-colors uppercase tracking-tighter">03. Despegue y Autoridad</h3>
+                        <p class="text-gray-400 max-w-xl leading-relaxed">Vinculamos tu web con Google Maps para disparar tu posicionamiento y validación digital inmediata.</p>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Proceso -->
-    <section class="py-20">
-        <div class="max-w-xl mx-auto relative">
-            <h2 class="text-xs font-bold tracking-[0.4em] text-blue-500 uppercase mb-12 italic">// NUESTRO PROCESO DE TRABAJO</h2>
-            
-            <div class="relative">
-                <div class="process-line"></div>
-                
-                <div class="process-step">
-                    <div class="process-dot"></div>
-                    <h3 class="text-2xl font-bold mb-2 tracking-tighter uppercase">01. Conexión Estratégica</h3>
-                    <p class="text-gray-500 text-sm leading-snug">Definimos tus objetivos y el perfil de tu cliente ideal para diseñar una solución a medida.</p>
-                </div>
-
-                <div class="process-step">
-                    <div class="process-dot"></div>
-                    <h3 class="text-2xl font-bold mb-2 tracking-tighter uppercase text-blue-500">02. Diseño de Autor</h3>
-                    <p class="text-gray-500 text-sm leading-snug">Construimos una interfaz rápida, segura y optimizada para dispositivos móviles (Mobile-First).</p>
-                </div>
-
-                <div class="process-step">
-                    <div class="process-dot"></div>
-                    <h3 class="text-2xl font-bold mb-2 tracking-tighter uppercase">03. Lanzamiento y SEO</h3>
-                    <p class="text-gray-500 text-sm leading-snug">Vinculamos tu sitio con Google Maps para maximizar tu autoridad digital desde el primer día.</p>
-                </div>
+        <!-- Contact Section -->
+        <section class="py-32 px-6 border-t border-white/5 bg-gradient-to-b from-brand-black to-gray-950" id="contacto">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-5xl md:text-7xl font-black mb-16 tracking-tighter uppercase">Hablemos hoy.</h2>
+                <form id="authority-form" class="space-y-6">
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <input class="w-full bg-brand-gray/40 border-white/10 rounded-custom py-5 px-6 text-xs tracking-widest uppercase focus:ring-1 focus:ring-brand-accent focus:border-brand-accent placeholder:text-gray-600 outline-none" id="name" placeholder="NOMBRE COMPLETO" required type="text"/>
+                        <input class="w-full bg-brand-gray/40 border-white/10 rounded-custom py-5 px-6 text-xs tracking-widest uppercase focus:ring-1 focus:ring-brand-accent focus:border-brand-accent placeholder:text-gray-600 outline-none" id="business" placeholder="NOMBRE DE TU EMPRESA" required type="text"/>
+                    </div>
+                    <textarea class="w-full bg-brand-gray/40 border-white/10 rounded-custom py-5 px-6 text-xs tracking-widest uppercase focus:ring-1 focus:ring-brand-accent focus:border-brand-accent placeholder:text-gray-600 outline-none resize-none" id="message" placeholder="¿QUÉ OBJETIVO TENÉS PARA TU WEB?" required rows="5"></textarea>
+                    
+                    <button class="w-full bg-white text-black font-black text-xs tracking-[0.2em] py-6 rounded-custom btn-glow uppercase transition-all" type="submit">
+                        PEDIR PRESUPUESTO
+                    </button>
+                </form>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
-    <!-- Formulario de Contacto -->
-    <section id="contacto" class="pb-32 pt-20">
-        <div class="max-w-xl mx-auto w-full">
-            <div class="mb-12 text-center md:text-left">
-                <h2 class="text-4xl font-extrabold tracking-tighter mb-4 text-gradient">Hablemos hoy.</h2>
-                <p class="text-gray-400">Impulsá tu presencia digital y ganá más clientes.</p>
+    <!-- Footer Actualizado 2026 -->
+    <footer class="py-16 px-6 bg-black border-t border-white/5 text-center">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-2xl font-black tracking-tighter mb-8">HOLAWEB</div>
+            <div class="space-y-3 mb-12">
+                <p class="text-[10px] font-bold tracking-[0.3em] uppercase text-gray-500"><i class="fas fa-map-marker-alt mr-2 text-brand-accent"></i> Córdoba, Argentina</p>
+                <p class="text-[10px] font-bold tracking-[0.3em] uppercase text-gray-500"><i class="fas fa-phone mr-2 text-brand-accent"></i> +54 9 351 592-9043</p>
+                <p class="text-[10px] font-bold tracking-[0.3em] uppercase text-gray-500"><i class="fas fa-envelope mr-2 text-brand-accent"></i> HOLA@HOLAWEB.COM.AR</p>
             </div>
-
-            <form id="authority-form" class="space-y-4">
-                <div class="grid gap-4">
-                    <input type="text" id="name" placeholder="NOMBRE COMPLETO" required class="w-full rounded-2xl px-6 py-5 outline-none font-bold text-xs tracking-widest uppercase">
-                    <input type="text" id="business" placeholder="NOMBRE DE TU EMPRESA" required class="w-full rounded-2xl px-6 py-5 outline-none font-bold text-xs tracking-widest uppercase">
-                </div>
-                <textarea id="message" rows="4" placeholder="¿CÓMO PODEMOS AYUDARTE?" required class="w-full rounded-2xl px-6 py-5 outline-none font-bold text-xs tracking-widest uppercase resize-none"></textarea>
-                
-                <button type="submit" class="w-full btn-primary py-5 rounded-2xl text-lg mt-4 accent-glow flex items-center justify-center gap-3">
-                    PEDIR PRESUPUESTO <i class="fab fa-whatsapp"></i>
-                </button>
-            </form>
-        </div>
-    </section>
-
-    <!-- 4. SEO LOCAL (NAP en Footer) -->
-    <footer class="py-12 px-6 border-t border-white/5 bg-black/80">
-        <div class="max-w-xl mx-auto text-center">
-            <h4 class="font-black text-xl mb-6 tracking-tighter uppercase">HOLAWEB</h4>
-            <div class="space-y-2 text-[10px] font-bold text-gray-500 uppercase tracking-widest mb-8">
-                <p><i class="fas fa-map-marker-alt text-blue-500 mr-2"></i> Córdoba, Argentina</p>
-                <p><i class="fas fa-phone text-blue-500 mr-2"></i> +54 9 351 592-9043</p>
-                <p><i class="fas fa-envelope text-blue-500 mr-2"></i> hola@holaweb.com.ar</p>
+            <div class="pt-8 border-t border-white/5">
+                <p class="text-[9px] font-medium tracking-widest text-gray-700 uppercase">
+                    © 2026 ESTRATEGIA DIGITAL Y DESARROLLO PROFESIONAL
+                </p>
             </div>
-            <p class="text-[9px] text-gray-700 uppercase tracking-[0.4em]">© 2026 ESTRATEGIA DIGITAL Y DESARROLLO PROFESIONAL</p>
         </div>
     </footer>
 
@@ -229,10 +222,11 @@
             const business = document.getElementById('business').value;
             const message = document.getElementById('message').value;
             const phone = "5493515929043";
-            const text = `*HOLAWEB - CONSULTA WEB*%0A%0A*Nombre:* ${name}%0A*Empresa:* ${business}%0A*Mensaje:* ${message}`;
+            const text = `*HOLAWEB - CONSULTA WEB 2026*%0A%0A*Nombre:* ${name}%0A*Empresa:* ${business}%0A*Objetivo:* ${message}`;
             window.open(`https://wa.me/${phone}?text=${text}`, '_blank');
         });
     </script>
+    <!-- Font Awesome para los iconos de autoridad -->
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </body>
 </html>
