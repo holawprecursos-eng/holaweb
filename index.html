@@ -2,331 +2,174 @@
 <html lang="es" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HolaWeb | Diseño Web de Alto Impacto</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>HOLAWEB | Autoridad Digital</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
         
-        :root {
-            --primary: #0062ff;
-            --accent: #7e22ce;
-        }
-
         body {
+            background-color: #0a0a0a;
+            color: #ffffff;
             font-family: 'Plus Jakarta Sans', sans-serif;
-            background-color: #fafafa;
+            overflow-x: hidden;
         }
 
-        .glass {
-            background: rgba(255, 255, 255, 0.7);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.3);
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 24px;
         }
 
         .text-gradient {
-            background: linear-gradient(135deg, var(--primary), var(--accent));
+            background: linear-gradient(135deg, #ffffff 0%, #a1a1a1 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
 
-        .bento-card {
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            border: 1px solid rgba(0,0,0,0.05);
+        .accent-glow {
+            box-shadow: 0 0 40px rgba(59, 130, 246, 0.2);
         }
 
-        .bento-card:hover {
-            transform: scale(1.02);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.05);
-            border-color: var(--primary);
+        section {
+            padding: 5rem 1.5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
         }
 
-        .floating {
-            animation: floating 3s ease-in-out infinite;
+        .badge-google {
+            background: rgba(66, 133, 244, 0.1);
+            border: 1px solid rgba(66, 133, 244, 0.3);
+            color: #4285F4;
         }
 
-        @keyframes floating {
-            0% { transform: translateY(0px); }
-            50% { transform: translateY(-10px); }
-            100% { transform: translateY(0px); }
+        .btn-primary {
+            background: #ffffff;
+            color: #000000;
+            font-weight: 700;
+            transition: all 0.3s ease;
         }
 
-        /* Custom Scrollbar */
-        ::-webkit-scrollbar { width: 8px; }
-        ::-webkit-scrollbar-track { background: #f1f1f1; }
-        ::-webkit-scrollbar-thumb { background: #ddd; border-radius: 10px; }
-        ::-webkit-scrollbar-thumb:hover { background: #bbb; }
+        .btn-primary:active {
+            transform: scale(0.96);
+        }
+
+        input, textarea {
+            background: rgba(255, 255, 255, 0.05) !important;
+            border: 1px solid rgba(255, 255, 255, 0.1) !important;
+            color: white !important;
+        }
     </style>
 </head>
-<body class="overflow-x-hidden">
+<body>
 
-    <!-- Navegación Premium -->
-    <nav class="fixed w-full z-50 px-4 py-6">
-        <div class="max-w-5xl mx-auto glass rounded-full px-6 py-3 flex justify-between items-center shadow-sm">
-            <div class="flex items-center gap-2">
-                <div class="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center">
-                    <span class="text-white font-bold">H</span>
-                </div>
-                <span class="text-xl font-extrabold tracking-tight">HolaWeb</span>
-            </div>
-            <div class="hidden md:flex gap-8 text-sm font-semibold text-gray-600">
-                <a href="#inicio" class="hover:text-blue-600 transition-colors">Inicio</a>
-                <a href="#servicios" class="hover:text-blue-600 transition-colors">Servicios</a>
-                <a href="#proceso" class="hover:text-blue-600 transition-colors">Proceso</a>
-                <a href="#proyectos" class="hover:text-blue-600 transition-colors">Portafolio</a>
-            </div>
-            <a href="#contacto" class="bg-black text-white px-5 py-2 rounded-full text-sm font-bold hover:bg-blue-600 transition-all active:scale-95">
-                Empezar <i class="fas fa-arrow-right ml-1 text-xs"></i>
-            </a>
-        </div>
-    </nav>
+    <!-- Header -->
+    <header class="fixed top-0 left-0 w-full z-50 p-6 flex justify-between items-center bg-black/50 backdrop-blur-md border-b border-white/5">
+        <div class="font-extrabold text-xl tracking-tighter">HOLAWEB</div>
+        <a href="#contacto" class="text-[10px] font-bold bg-white/10 px-4 py-2 rounded-full uppercase tracking-widest">Contacto</a>
+    </header>
 
-    <!-- Hero Section -->
-    <section id="inicio" class="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
-        <div class="absolute top-20 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-blue-100 rounded-full blur-3xl opacity-30 -z-10"></div>
-        
-        <div class="max-w-7xl mx-auto px-4 text-center">
-            <div class="inline-block px-4 py-1.5 mb-6 rounded-full bg-blue-50 border border-blue-100 text-blue-600 text-sm font-bold animate__animated animate__fadeInDown">
-                🚀 Diseño Web Pro Max
-            </div>
-            <h1 class="text-6xl md:text-8xl font-extrabold tracking-tighter mb-8 animate__animated animate__fadeInUp">
-                Convertimos ideas en <br> <span class="text-gradient">experiencias digitales.</span>
+    <!-- Hero -->
+    <section class="pt-32 pb-20">
+        <div class="max-w-xl mx-auto text-center animate__animated animate__fadeIn">
+            <span class="text-blue-500 font-bold tracking-widest text-[10px] uppercase mb-4 block italic">Córdoba, Argentina</span>
+            <h1 class="text-5xl md:text-7xl font-extrabold tracking-tighter leading-[1.1] mb-6 text-gradient text-balance">
+                Convertí la confianza en ventas.
             </h1>
-            <p class="text-lg md:text-xl text-gray-500 max-w-2xl mx-auto mb-10 leading-relaxed animate__animated animate__fadeInUp animate__delay-1s">
-                No hacemos simples páginas. Diseñamos ecosistemas digitales que posicionan tu marca, atraen clientes y escalan tu facturación.
+            <p class="text-gray-400 text-lg leading-relaxed mb-10 px-4">
+                No es solo una web. Es el respaldo profesional que tu negocio necesita para que los clientes elijan comprarte a vos y no a la competencia.
             </p>
-            <div class="flex flex-col sm:flex-row justify-center gap-4 animate__animated animate__fadeInUp animate__delay-1s">
-                <a href="#contacto" class="bg-blue-600 text-white px-10 py-5 rounded-2xl text-lg font-bold hover:shadow-2xl hover:shadow-blue-300 transition-all transform hover:-translate-y-1">
-                    Quiero mi web ahora
-                </a>
-                <a href="#proyectos" class="px-10 py-5 rounded-2xl text-lg font-bold border border-gray-200 bg-white hover:bg-gray-50 transition-all">
-                    Ver casos de éxito
-                </a>
-            </div>
-            
-            <!-- Hero Stats -->
-            <div class="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
-                <div><h3 class="text-3xl font-extrabold">+50</h3><p class="text-gray-400 text-sm">Sitios Lanzados</p></div>
-                <div><h3 class="text-3xl font-extrabold">100%</h3><p class="text-gray-400 text-sm">Responsive</p></div>
-                <div><h3 class="text-3xl font-extrabold">< 1s</h3><p class="text-gray-400 text-sm">Carga Rápida</p></div>
-                <div><h3 class="text-3xl font-extrabold">UX</h3><p class="text-gray-400 text-sm">User Centered</p></div>
+            <div class="flex flex-col gap-4 px-6">
+                <a href="#contacto" class="btn-primary py-5 rounded-2xl text-lg accent-glow">IMPULSAR MI NEGOCIO</a>
             </div>
         </div>
     </section>
 
-    <!-- Sección Bento de Servicios -->
-    <section id="servicios" class="py-24 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="mb-16">
-                <h2 class="text-4xl font-extrabold tracking-tight mb-4">Servicios que escalan</h2>
-                <p class="text-gray-500 text-lg">Estrategia, diseño y código unidos por un solo objetivo.</p>
+    <!-- Autoridad y Google -->
+    <section class="bg-white/5 rounded-[3rem] mx-2 py-20">
+        <div class="max-w-xl mx-auto">
+            <div class="badge-google inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-[10px] font-bold mb-6 uppercase tracking-widest">
+                <i class="fab fa-google text-sm"></i> Google Business Ready
             </div>
+            <h2 class="text-3xl font-bold mb-8 tracking-tighter">¿Por qué una web profesional te ayuda a vender más?</h2>
             
-            <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
-                <div class="md:col-span-8 bg-gray-50 p-10 rounded-[2.5rem] bento-card relative overflow-hidden group">
-                    <div class="relative z-10">
-                        <span class="bg-blue-600 text-white p-3 rounded-2xl inline-block mb-6 shadow-lg"><i class="fas fa-magic"></i></span>
-                        <h3 class="text-3xl font-bold mb-4">Diseño UI/UX Personalizado</h3>
-                        <p class="text-gray-600 max-w-md">Creamos interfaces que no solo se ven bien, sino que guían al usuario hacia la conversión mediante psicología visual y accesibilidad.</p>
-                    </div>
-                    <div class="absolute -right-20 -bottom-20 w-80 h-80 bg-blue-100 rounded-full opacity-50 transition-transform group-hover:scale-110"></div>
-                </div>
-                
-                <div class="md:col-span-4 bg-black text-white p-10 rounded-[2.5rem] bento-card">
-                    <span class="bg-white text-black p-3 rounded-2xl inline-block mb-6"><i class="fas fa-code"></i></span>
-                    <h3 class="text-2xl font-bold mb-4">Desarrollo Web</h3>
-                    <p class="text-gray-400">Código limpio, escalable y optimizado para SEO desde el minuto cero.</p>
-                </div>
-
-                <div class="md:col-span-4 bg-purple-50 p-10 rounded-[2.5rem] bento-card">
-                    <span class="bg-purple-600 text-white p-3 rounded-2xl inline-block mb-6"><i class="fas fa-search-dollar"></i></span>
-                    <h3 class="text-2xl font-bold mb-4">SEO Estratégico</h3>
-                    <p class="text-gray-600">No solo existes, te encuentran. Optimizamos para que aparezcas donde tus clientes buscan.</p>
-                </div>
-
-                <div class="md:col-span-8 bg-blue-600 text-white p-10 rounded-[2.5rem] bento-card flex items-center justify-between">
-                    <div class="max-w-md">
-                        <h3 class="text-3xl font-bold mb-4">Mantenimiento Pro</h3>
-                        <p class="text-blue-100">Nos encargamos de que tu web siempre esté actualizada, segura y volando en velocidad.</p>
-                    </div>
-                    <i class="fas fa-shield-alt text-8xl opacity-20 hidden lg:block"></i>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Proceso -->
-    <section id="proceso" class="py-24 bg-gray-50 border-y border-gray-100">
-        <div class="max-w-7xl mx-auto px-4">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold mb-4">El camino al éxito</h2>
-                <p class="text-gray-500">Un proceso refinado para resultados excepcionales.</p>
-            </div>
-            
-            <div class="grid md:grid-cols-4 gap-8">
-                <div class="relative text-center">
-                    <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-6 shadow-sm border border-gray-100 font-bold text-blue-600">01</div>
-                    <h4 class="font-bold mb-2">Descubrimiento</h4>
-                    <p class="text-gray-500 text-sm">Entendemos tus metas y tu audiencia ideal.</p>
-                </div>
-                <div class="relative text-center">
-                    <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-6 shadow-sm border border-gray-100 font-bold text-blue-600">02</div>
-                    <h4 class="font-bold mb-2">Prototipado</h4>
-                    <p class="text-gray-500 text-sm">Diseñamos la estructura enfocada en UX.</p>
-                </div>
-                <div class="relative text-center">
-                    <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-6 shadow-sm border border-gray-100 font-bold text-blue-600">03</div>
-                    <h4 class="font-bold mb-2">Desarrollo</h4>
-                    <p class="text-gray-500 text-sm">Construimos con las mejores tecnologías.</p>
-                </div>
-                <div class="relative text-center">
-                    <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-6 shadow-sm border border-gray-100 font-bold text-blue-600">04</div>
-                    <h4 class="font-bold mb-2">Despegue</h4>
-                    <p class="text-gray-500 text-sm">Lanzamiento y soporte continuo.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Portafolio -->
-    <section id="proyectos" class="py-24 bg-white">
-        <div class="max-w-7xl mx-auto px-4">
-            <div class="flex flex-col md:flex-row justify-between items-end mb-16">
-                <div>
-                    <h2 class="text-4xl font-bold mb-4">Trabajos que hablan</h2>
-                    <p class="text-gray-500 italic">"Design is not just what it looks like, it's how it works."</p>
-                </div>
-            </div>
-            
-            <div class="grid md:grid-cols-2 gap-10">
-                <div class="group cursor-pointer">
-                    <div class="overflow-hidden rounded-[2rem] bg-gray-100 aspect-[4/3] mb-6 shadow-sm">
-                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800" alt="Proyecto 1" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0">
-                    </div>
-                    <div class="flex justify-between items-start">
+            <div class="grid gap-6">
+                <!-- Beneficio 1 -->
+                <div class="glass-card p-8">
+                    <div class="flex items-start gap-4">
+                        <div class="text-blue-500 text-2xl mt-1"><i class="fas fa-shield-check"></i></div>
                         <div>
-                            <h4 class="text-2xl font-bold">Neo-Bank Landing</h4>
-                            <p class="text-gray-400">UI/UX & Frontend</p>
+                            <h3 class="text-lg font-bold mb-2">Seguridad Inmediata</h3>
+                            <p class="text-gray-400 text-sm leading-relaxed">Un cliente que ve una web profesional siente que está tratando con una empresa real y seria. La confianza es el primer paso de cualquier venta.</p>
                         </div>
-                        <a href="#" class="w-12 h-12 border border-gray-200 rounded-full flex items-center justify-center group-hover:bg-black group-hover:text-white transition-all">
-                            <i class="fas fa-arrow-right -rotate-45 group-hover:rotate-0 transition-transform"></i>
-                        </a>
                     </div>
                 </div>
 
-                <div class="group cursor-pointer mt-12 md:mt-24">
-                    <div class="overflow-hidden rounded-[2rem] bg-gray-100 aspect-[4/3] mb-6 shadow-sm">
-                        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80&w=800" alt="Proyecto 2" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0">
-                    </div>
-                    <div class="flex justify-between items-start">
+                <!-- Beneficio 2 -->
+                <div class="glass-card p-8 border-blue-500/30">
+                    <div class="flex items-start gap-4">
+                        <div class="text-blue-500 text-2xl mt-1"><i class="fas fa-map-marker-alt"></i></div>
                         <div>
-                            <h4 class="text-2xl font-bold">HealthTrack App</h4>
-                            <p class="text-gray-400">Mobile Design</p>
+                            <h3 class="text-lg font-bold mb-2">Autoridad en Google</h3>
+                            <p class="text-gray-400 text-sm leading-relaxed text-balance">Al sumar tu web a tu perfil de <b>Google Maps</b>, le das a Google la señal definitiva de autoridad. Aparecés más arriba y con una imagen mucho más sólida.</p>
                         </div>
-                        <a href="#" class="w-12 h-12 border border-gray-200 rounded-full flex items-center justify-center group-hover:bg-black group-hover:text-white transition-all">
-                            <i class="fas fa-arrow-right -rotate-45 group-hover:rotate-0 transition-transform"></i>
-                        </a>
+                    </div>
+                </div>
+
+                <!-- Beneficio 3 -->
+                <div class="glass-card p-8">
+                    <div class="flex items-start gap-4">
+                        <div class="text-blue-500 text-2xl mt-1"><i class="fas fa-user-check"></i></div>
+                        <div>
+                            <h3 class="text-lg font-bold mb-2">Validación 24/7</h3>
+                            <p class="text-gray-400 text-sm leading-relaxed">Tu web trabaja mientras dormís. Cuando un cliente te busca a deshoras, tu sitio le confirma que sos la opción correcta para su problema.</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Contacto Moderno -->
-    <section id="contacto" class="py-24 bg-black text-white rounded-t-[3rem]">
-        <div class="max-w-5xl mx-auto px-4">
-            <div class="grid md:grid-cols-2 gap-20">
-                <div>
-                    <h2 class="text-5xl font-extrabold mb-8 leading-tight">Hagamos algo <br><span class="text-blue-500 underline">memorable</span> juntos.</h2>
-                    <p class="text-gray-400 mb-8 text-lg">¿Listo para subir de nivel? Cuéntame tu visión y la haremos realidad.</p>
-                    <div class="space-y-6">
-                        <div class="flex items-center gap-4">
-                            <div class="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center text-blue-400">
-                                <i class="fas fa-envelope"></i>
-                            </div>
-                            <div>
-                                <p class="text-sm text-gray-500 uppercase font-bold tracking-widest">Email</p>
-                                <p class="text-lg font-bold">hola@holaweb.com</p>
-                            </div>
-                        </div>
-                        <div class="flex items-center gap-4">
-                            <div class="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center text-green-400">
-                                <i class="fab fa-whatsapp"></i>
-                            </div>
-                            <div>
-                                <p class="text-sm text-gray-500 uppercase font-bold tracking-widest">WhatsApp</p>
-                                <p class="text-lg font-bold">+123 456 789</p>
-                            </div>
-                        </div>
-                    </div>
+    <!-- Formulario -->
+    <section id="contacto" class="pb-32 pt-20">
+        <div class="max-w-xl mx-auto w-full">
+            <div class="mb-12 text-center md:text-left">
+                <h2 class="text-4xl font-extrabold tracking-tighter mb-4">Empezá hoy.</h2>
+                <p class="text-gray-400">Posicioná tu negocio en Google y ganá autoridad.</p>
+            </div>
+
+            <form id="authority-form" class="space-y-4">
+                <div class="grid gap-4">
+                    <input type="text" id="name" placeholder="NOMBRE" required class="w-full rounded-2xl px-6 py-5 outline-none font-bold text-xs tracking-widest uppercase">
+                    <input type="text" id="business" placeholder="NOMBRE DE TU NEGOCIO" required class="w-full rounded-2xl px-6 py-5 outline-none font-bold text-xs tracking-widest uppercase">
                 </div>
+                <textarea id="message" rows="4" placeholder="¿QUÉ OBJETIVO TENÉS PARA TU WEB?" required class="w-full rounded-2xl px-6 py-5 outline-none font-bold text-xs tracking-widest uppercase resize-none"></textarea>
                 
-                <form id="contact-form" class="space-y-4">
-                    <input type="text" placeholder="Tu Nombre" class="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 focus:ring-2 focus:ring-blue-600 outline-none transition">
-                    <input type="email" placeholder="Email de contacto" class="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 focus:ring-2 focus:ring-blue-600 outline-none transition">
-                    <select class="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 focus:ring-2 focus:ring-blue-600 outline-none transition text-gray-400">
-                        <option>Tipo de proyecto</option>
-                        <option>Landing Page</option>
-                        <option>E-commerce</option>
-                        <option>App Personalizada</option>
-                    </select>
-                    <textarea rows="4" placeholder="¿En qué te puedo ayudar?" class="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 focus:ring-2 focus:ring-blue-600 outline-none transition"></textarea>
-                    <button class="w-full bg-blue-600 py-5 rounded-2xl font-bold text-lg hover:bg-blue-700 transition active:scale-[0.98]">
-                        Enviar propuesta
-                    </button>
-                </form>
-            </div>
+                <button type="submit" class="w-full btn-primary py-5 rounded-2xl text-lg mt-4 accent-glow flex items-center justify-center gap-3">
+                    QUIERO MÁS AUTORIDAD <i class="fab fa-whatsapp"></i>
+                </button>
+            </form>
         </div>
     </section>
 
-    <!-- Footer Actualizado -->
-    <footer class="bg-black py-12 border-t border-white/5 text-center">
-        <div class="max-w-7xl mx-auto px-4">
-            <span class="text-white/40 text-sm">
-                &copy; <span id="year"></span> HolaWeb. Todos los derechos reservados.
-            </span>
-        </div>
+    <footer class="py-12 text-center border-t border-white/5 opacity-40">
+        <p class="text-[10px] font-bold uppercase tracking-[0.3em]">HOLAWEB / ESTRATEGIA DIGITAL</p>
     </footer>
 
     <script>
-        // Actualizar año automáticamente
-        document.getElementById('year').textContent = new Date().getFullYear();
-
-        // Efecto scroll para el nav
-        window.addEventListener('scroll', () => {
-            const nav = document.querySelector('nav');
-            if (window.scrollY > 50) {
-                nav.style.paddingTop = '1rem';
-                nav.style.paddingBottom = '1rem';
-            } else {
-                nav.style.paddingTop = '1.5rem';
-                nav.style.paddingBottom = '1.5rem';
-            }
-        });
-
-        // Simulación de envío de formulario
-        const form = document.getElementById('contact-form');
-        form.addEventListener('submit', (e) => {
+        document.getElementById('authority-form').addEventListener('submit', (e) => {
             e.preventDefault();
-            const btn = form.querySelector('button');
-            const originalText = btn.innerHTML;
-            btn.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i> Enviando...';
-            btn.disabled = true;
-
-            setTimeout(() => {
-                btn.innerHTML = '¡Mensaje Enviado! 🎉';
-                btn.classList.replace('bg-blue-600', 'bg-green-600');
-                form.reset();
-                setTimeout(() => {
-                    btn.innerHTML = originalText;
-                    btn.classList.replace('bg-green-600', 'bg-blue-600');
-                    btn.disabled = false;
-                }, 3000);
-            }, 1500);
+            const name = document.getElementById('name').value;
+            const business = document.getElementById('business').value;
+            const message = document.getElementById('message').value;
+            const phone = "5493515929043";
+            const text = `*HOLAWEB - CONSULTA AUTORIDAD*%0A%0A*Nombre:* ${name}%0A*Negocio:* ${business}%0A*Objetivo:* ${message}`;
+            window.open(`https://wa.me/${phone}?text=${text}`, '_blank');
         });
     </script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </body>
 </html>
