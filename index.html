@@ -22,6 +22,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     
+    <!-- Font Awesome (v6 para mejores iconos) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
     <script>
         tailwind.config = {
             theme: {
@@ -35,6 +38,7 @@
                             white: '#FFFFFF',
                             gray: '#111111',
                             accent: '#3B82F6', 
+                            whatsapp: '#25D366',
                         }
                     },
                     borderRadius: {
@@ -71,14 +75,61 @@
             width: 2px;
             background: linear-gradient(to bottom, #3B82F6 0%, #111111 100%);
         }
+
+        /* Estilos del botón flotante */
+        .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 30px;
+            right: 30px;
+            background-color: #25d366;
+            color: #FFF;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            background-color: #128c7e;
+        }
+        .whatsapp-pulse {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: #25d366;
+            border-radius: 50%;
+            z-index: -1;
+            animation: pulse-border 2s infinite;
+        }
+        @keyframes pulse-border {
+            0% { transform: scale(1); opacity: 0.8; }
+            100% { transform: scale(1.5); opacity: 0; }
+        }
     </style>
 </head>
 <body class="bg-brand-black text-brand-white antialiased">
 
+    <!-- Botón Flotante de WhatsApp -->
+    <a href="https://wa.me/5493515929043?text=Hola!%20Vi%20tu%20web%20y%20me%20gustaría%20recibir%20más%20información%20sobre%20el%20diseño%20web." 
+       class="whatsapp-float" 
+       target="_blank" 
+       rel="noopener noreferrer"
+       aria-label="Contacto por WhatsApp">
+        <div class="whatsapp-pulse"></div>
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
     <!-- Navigation -->
     <nav class="fixed top-0 w-full z-50 bg-brand-black/80 backdrop-blur-md border-b border-white/10">
         <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-            <div class="text-xl font-black tracking-tighter">HOLAWEB</div>
+            <div class="text-xl font-black tracking-tighter text-white">HOLAWEB</div>
             <div>
                 <a class="text-[10px] font-bold tracking-widest uppercase border border-white/20 px-6 py-2 rounded-custom hover:bg-white hover:text-black transition-colors" href="#contacto">
                     CONTACTO
@@ -121,9 +172,7 @@
                     <!-- Benefit 1 -->
                     <div class="group p-8 border border-white/10 rounded-custom bg-black/40 hover:border-brand-accent/50 transition-colors">
                         <div class="text-brand-accent mb-4 text-2xl">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                            </svg>
+                            <i class="fas fa-shield-alt"></i>
                         </div>
                         <h3 class="text-xl font-bold mb-4 uppercase tracking-tighter">Seguridad para el Cliente</h3>
                         <p class="text-gray-400 leading-relaxed text-sm">
@@ -133,10 +182,7 @@
                     <!-- Benefit 2 -->
                     <div class="group p-8 border border-white/10 rounded-custom bg-black/40 hover:border-brand-accent/50 transition-colors">
                         <div class="text-brand-accent mb-4 text-2xl">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                            </svg>
+                            <i class="fas fa-map-location-dot"></i>
                         </div>
                         <h3 class="text-xl font-bold mb-4 uppercase tracking-tighter">SEO Local & Google Maps</h3>
                         <p class="text-gray-400 leading-relaxed text-sm">
@@ -182,7 +228,7 @@
         <!-- Contact Section -->
         <section class="py-32 px-6 border-t border-white/5 bg-gradient-to-b from-brand-black to-gray-950" id="contacto">
             <div class="max-w-4xl mx-auto">
-                <h2 class="text-5xl md:text-7xl font-black mb-16 tracking-tighter uppercase">Hablemos hoy.</h2>
+                <h2 class="text-5xl md:text-7xl font-black mb-16 tracking-tighter uppercase text-white">Hablemos hoy.</h2>
                 <form id="authority-form" class="space-y-6">
                     <div class="grid md:grid-cols-2 gap-6">
                         <input class="w-full bg-brand-gray/40 border-white/10 rounded-custom py-5 px-6 text-xs tracking-widest uppercase focus:ring-1 focus:ring-brand-accent focus:border-brand-accent placeholder:text-gray-600 outline-none" id="name" placeholder="NOMBRE COMPLETO" required type="text"/>
@@ -201,7 +247,7 @@
     <!-- Footer Actualizado 2026 -->
     <footer class="py-16 px-6 bg-black border-t border-white/5 text-center">
         <div class="max-w-7xl mx-auto">
-            <div class="text-2xl font-black tracking-tighter mb-8">HOLAWEB</div>
+            <div class="text-2xl font-black tracking-tighter mb-8 text-white">HOLAWEB</div>
             <div class="space-y-3 mb-12">
                 <p class="text-[10px] font-bold tracking-[0.3em] uppercase text-gray-500"><i class="fas fa-map-marker-alt mr-2 text-brand-accent"></i> Córdoba, Argentina</p>
                 <p class="text-[10px] font-bold tracking-[0.3em] uppercase text-gray-500"><i class="fas fa-phone mr-2 text-brand-accent"></i> +54 9 351 592-9043</p>
@@ -226,7 +272,5 @@
             window.open(`https://wa.me/${phone}?text=${text}`, '_blank');
         });
     </script>
-    <!-- Font Awesome para los iconos de autoridad -->
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </body>
 </html>
